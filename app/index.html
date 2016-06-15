@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shoppinglist</title>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  </head>
+  <body>
+    <h1><center>Welcome to your shoppinglist!</center></h1>
+    <div id="list">
+
+    </div>
+  </body>
+  <script>
+  $.get('/list', function(response) {
+    console.log('list = ', response);
+    $('#list').text(response.join(' | '));    // Set the text of #list to the
+                                              // concantenated items Array
+});
+  </script>
+</html>
