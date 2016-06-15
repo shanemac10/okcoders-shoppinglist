@@ -10,6 +10,6 @@ app.listen(3000, function(err) {    //Start listening on port 3000
 
 app.use('/', express.static('./app'));   //Serve our static html files
 
-app.get('/list', function(request,response){
+app.get('/listItems', function(request,response){
   response.json([1,2,3]);
 });

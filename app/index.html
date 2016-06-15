@@ -7,14 +7,14 @@
   </head>
   <body>
     <h1><center>Welcome to your shoppinglist!</center></h1>
-    <div id="list">
+    <div id="listContainer">
 
     </div>
   </body>
   <script>
   $.get('/list', function(response) {
     console.log('list = ', response);
-    $('#list').text(response.join(' | '));    // Set the text of #list to the
+    $('#listContainer').text(response.join(' | '));    // Set the text of #list to the
                                               // concantenated items Array
 });
   </script>
