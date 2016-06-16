@@ -13,3 +13,12 @@ app.use('/', express.static('./app'));   //Serve our static html files
 app.get('/listItems', function(request,response){
   response.json([1,2,3]);
 });
+
+//function getListName(text, defaultText) {
+//  return prompt(text,defaultText);
+//};
+
+app.get('/listName', function(request,response){
+  var newname = "All Num Inside";//getListName("What do you want to name your list?","My List");//prompt('What would you like to name your list?');
+  response.json([newname]);
+});

@@ -7,15 +7,18 @@
   </head>
   <body>
     <h1><center>Welcome to your shoppinglist!</center></h1>
-    <div id="listContainer">
-
-    </div>
+    <div id="listNameDisplay"></div>
+    <div id="listContainer"></div>
   </body>
   <script>
-  $.get('/list', function(response) {
+  $.get('/listItems', function(response) {
     console.log('list = ', response);
-    $('#listContainer').text(response.join(' | '));    // Set the text of #list to the
-                                              // concantenated items Array
-});
+    $('#listContainer').text(response.join(' | '));    // Set the text of #listContainer to the
+                                                      // concantenated items Array
+  });
+  $.get('/listName', function(response) { //});
+    $('#listNameDisplay').text(response);
+  });
+
   </script>
 </html>
